@@ -1,15 +1,11 @@
-package qa.guru.lesson_10;
+package qa.guru.data.providers.lesson;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import qa.guru.lesson_10.data.Language;
-
-import java.util.List;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CsvFileSearchTest {

@@ -1,4 +1,4 @@
-package qa.guru.lesson_10.data;
+package qa.guru.data.providers.lesson.data;
 
 public enum Language {
     RU("Русский"),

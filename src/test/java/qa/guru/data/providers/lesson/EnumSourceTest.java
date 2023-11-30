@@ -1,8 +1,8 @@
-package qa.guru.lesson_10;
+package qa.guru.data.providers.lesson;
 
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeEach;
-import qa.guru.lesson_10.data.Language;
+import qa.guru.data.providers.lesson.data.Language;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
