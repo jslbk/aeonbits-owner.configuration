@@ -9,6 +9,7 @@ This repository contains a suite of parameterized tests written in Java using JU
 - [Method Source Test](#method-test)
 - [How to Run](#run)
 
+---
 
 ### CSV File Search Test <a id="csv-test"></a>
 
@@ -22,9 +23,15 @@ An enum (`Language`) is used as a source for parameterization, verifying the cor
 
 This test uses a method as a source to provide a stream of language-menu option combinations, ensuring that the top menu displays the expected buttons for each language. It also checks the main page title and login button.
 
+<br>
+
 > These tests follow a parameterized testing approach, enabling the validation of various website elements in multiple languages, making the test suite flexible and easily extensible.
 
-# :play_or_pause_button: Running Tests <a id="run"></a>
+<br>
+
+---
+
+## Running Tests <a id="run"></a>
 
 To execute tests on Selenoid, use the following command:
 
@@ -32,7 +39,7 @@ To execute tests on Selenoid, use the following command:
 ./gradlew clean test -Dhost=remote
 ```
 
-___
+<br>
 
 To run tests locally, use the following command:
 
