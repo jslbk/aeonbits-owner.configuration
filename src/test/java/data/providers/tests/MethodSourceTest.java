@@ -1,7 +1,8 @@
-package qa.guru.data.providers.lesson;
+package data.providers.tests;
 
+import data.providers.TestBase;
+import data.providers.data.Language;
 import org.junit.jupiter.api.BeforeEach;
-import qa.guru.data.providers.lesson.data.Language;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -14,15 +15,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MethodSourceTest {
-
-    @BeforeEach
-    void setUp() {
-        open("https://www.jetbrains.com/idea/");
-        if ($(".language-suggest-bar").isDisplayed()) {
-            $(".language-suggest-bar__close").click();
-        }
-    }
+public class MethodSourceTest extends TestBase {
 
     @MethodSource("getTopMenuOptionsInAllLanguages")
     @ParameterizedTest(name = "Set language {0} and check top menu contains {1}")

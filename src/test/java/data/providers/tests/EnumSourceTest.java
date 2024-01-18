@@ -1,8 +1,9 @@
-package qa.guru.data.providers.lesson;
+package data.providers.tests;
 
 import com.codeborne.selenide.SelenideElement;
+import data.providers.TestBase;
 import org.junit.jupiter.api.BeforeEach;
-import qa.guru.data.providers.lesson.data.Language;
+import data.providers.data.Language;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
@@ -13,15 +14,7 @@ import static com.codeborne.selenide.Selenide.$$;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EnumSourceTest {
-
-    @BeforeEach
-    void setUp() {
-        open("https://www.jetbrains.com/idea/");
-        if ($(".language-suggest-bar").isDisplayed()) {
-            $(".language-suggest-bar__close").click();
-        }
-    }
+public class EnumSourceTest extends TestBase {
 
     @EnumSource(Language.class)
     @ParameterizedTest(name = "Set language '{0}' language and check it is selected")

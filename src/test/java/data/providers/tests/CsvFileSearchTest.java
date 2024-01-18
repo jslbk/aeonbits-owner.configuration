@@ -1,22 +1,13 @@
-package qa.guru.data.providers.lesson;
+package data.providers.tests;
 
-import org.junit.jupiter.api.BeforeEach;
+import data.providers.TestBase;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class CsvFileSearchTest {
-
-    @BeforeEach
-    void setUp() {
-        open("https://www.jetbrains.com/idea/");
-        if ($(".language-suggest-bar").isDisplayed()) {
-            $(".language-suggest-bar__close").click();
-        }
-    }
+public class CsvFileSearchTest extends TestBase {
 
     @CsvFileSource(resources = "/test_data/searchResultsShouldNotBeEmpty.csv", delimiter = '|')
     @ParameterizedTest(name = "Set {0} language main page title is {1}, subtitle is {2} and download button's text is {3}")
