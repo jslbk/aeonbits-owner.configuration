@@ -1,5 +1,5 @@
-# IntelliJ IDEA Website Validation Tests
-
+# Demo project of the [JetBrains IntelliJ IDEA](https://www.jetbrains.com/idea/) website parametrized tests
+ 
 This repository contains a suite of parameterized tests written in Java using JUnit 5, Selenide, and Selenoid. These tests aim to validate various elements on the [JetBrains IntelliJ IDEA](https://www.jetbrains.com/idea/) website, including the main page title, login button, and top menu options, for multiple languages.
 
 
